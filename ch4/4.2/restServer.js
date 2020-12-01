@@ -14,6 +14,9 @@ http.createServer(async (req, res) => {
         const data = await fs.readFile('./about.html');
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
         return res.end(data);
+      } else if (req.url === '/comment') {
+        const data = await fs.readFile('./comment.html');
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
       } else if (req.url === '/users') {
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
         return res.end(JSON.stringify(users));

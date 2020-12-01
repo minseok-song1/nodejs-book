@@ -1,5 +1,6 @@
 const path = require('path');
 
+console.log(path.join(__dirname,'..', 'var.js'))
 const string = __filename;
 
 console.log('path.sep:', path.sep);

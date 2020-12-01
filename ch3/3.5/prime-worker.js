@@ -22,7 +22,7 @@ function findPrimes(start, range) {
 
 if (isMainThread) {
   const max = 10000000;
-  const threadCount = 8;
+  const threadCount = 10;
   const threads = new Set();
   const range = Math.ceil((max - min) / threadCount);
   let start = min;
